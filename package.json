@@ -1,0 +1,22 @@
+{
+  "name": "dai2chai",
+  "version": "1.0.0",
+  "description": "Js script automating DAI to Chai conversion.",
+  "main": "DaiWatch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marczeller/DAI2Chai.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marczeller/DAI2Chai/issues"
+  },
+  "homepage": "https://github.com/marczeller/DAI2Chai#readme",
+  "dependencies": {
+    "web3": "^1.2.4"
+  }
+}
