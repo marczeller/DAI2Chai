@@ -1,16 +1,24 @@
 # DAI2Chai
 Js script automating DAI to Chai conversion.
 
+The script collect some DAI in a address and automaticaly convert it to CHAI, an interest-bearing token linked to MakerDAO Dai Saving Rate.
+
+then Chai is sent to the address defined for storage *I recommend a Hardware Wallet such as a Ledger*
+
 # Setup
 
-`Npm install`
+`npm install`
 
 then edit the `config.js` file with your credentials.
 
 `node Daiwatch.js`
 
+This bot assume you already approuved CHAI and have some allowance there. if you never used CHAI with the address linked to the script, you can do it on [chai.money](chai.money)
+
 # Security
 
-this bot have access to your funds, I **Highly** recommend to setup a reception address, fill it with a small amount of ETH to pay gas and fill another address as your `GoToAddress` in `config.js`
+this bot have access to your funds, I **Highly** recommend to setup the script on a dedicated reception address , fill it with a small amount of ETH to pay gas and fill another address as your `GoToAddress` in `config.js`
 
 Also, avoid running this script in a public VPS, use some self hosted device!
+
+Another vector of attack is trolls sending you very small amount of DAI to make you waste your ETH for transaction fees. make sure the `Threshold` in the `config.js` is not set too low.
