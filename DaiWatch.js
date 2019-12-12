@@ -37,7 +37,7 @@ async function Launcher() {
         "to": chaiAddress,
         "value": web3.utils.toHex(web3.utils.toWei("0", "ether")),
         "gasPrice" : GasPrice,
-        "gas" : 220000,
+        "gas" : 500000,
         "chainId": 1,
         "nonce" : nonce
         }
