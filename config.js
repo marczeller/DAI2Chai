@@ -7,7 +7,7 @@ exports.config = {
     // this can be an infura endpoint or your own node.
     provider : 'https://mainnet.infura.io/v3/a3456c11324745b7966ca0208ca8de4b',
     // this is the minimum amount of DAI needed before launching the script, don't put it too low! (Gas attacks)
-    threshold : '0.1',
+    threshold : '20',
     // where you want the chai to go for storage (I recommend an Hardware wallet)
     GoToAddress : '0x010afb8548a5D1a3a3D62f58CA0a5A1329974206',
     // tokens smart-contracts address
