@@ -7,6 +7,10 @@ then Chai is sent to the address defined for storage *I recommend a Hardware Wal
 
 # Setup
 
+`git clone https://github.com/marczeller/DAI2Chai.git`
+
+`cd DAI2Chai`
+
 `npm install`
 
 then edit the `config.js` file with your credentials.
