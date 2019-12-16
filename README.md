@@ -15,7 +15,7 @@ then Chai is sent to the address defined for storage *I recommend a Hardware Wal
 
 then edit the `config.js` file with your credentials.
 
-`node SAI2Chai.js`
+`node DAI2Chai.js`
 
 you can visit the offical Chai token website on [chai.money](chai.money)
 
