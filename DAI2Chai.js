@@ -25,10 +25,8 @@ async function Launcher() {
     GasPrice = GasPrice.toFixed(0)
     
     let addressForChai = require('./config.js')['config']['GoToAddress']
-    if (addressForChai.endsWith('.eth') === true) {
-        addressForChai = await web3.eth.ens.getAddress(addressForChai)
-        } else { addressForChai = addressForChai}
-
+    addressForChai.endsWith('.eth') === true ? addressForChai = await web3.eth.ens.getAddress(addressForChai) : addressForChai
+    
     let nonce = await web3.eth.getTransactionCount(myAddress, "pending")
     //build first tx schema
     const rawTransaction = {
@@ -68,7 +66,7 @@ async function Launcher() {
         }
         }
     async function DAIBalanceCheck(){
-        if (await ContractDAI.methods.balanceOf(myAddress).call() < threshold){
+        if (await ContractDAI.methods.balanceOf(myAddress).call() < web3.utils.fromWei(threshold, 'ether')){
             console.log('Not enough DAI for conversion, waiting for more deposit...')
             setTimeout(Launcher, 300000)
         } else {
@@ -127,7 +125,7 @@ async function Launcher() {
         nonce++
         rawTransaction.nonce = nonce
         console.log('DAI converted to chai, sending chai to storage address now...')
-        setTimeout(sendToStorage, 100000)
+        
     }
 
     async function sendToStorage() {
@@ -147,6 +145,7 @@ async function Launcher() {
     }
 SAIBalanceCheck()
 DAIBalanceCheck()
+sendToStorage()
 }
 
 Launcher()
